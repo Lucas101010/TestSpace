@@ -1,7 +1,7 @@
 var overlay = document.createElement("div");
 overlay.setAttribute('id', 'overlay');
 var oImg = document.createElement("img");
-oImg.setAttribute('src', 'http://www.libpng.org/pub/png/img_png/IceAlpha-0.5.png');
+oImg.setAttribute('src', 'https://www.fnordware.com/superpng/straight.png');
 oImg.setAttribute('alt', 'na');
 oImg.setAttribute('height', '100%');
 oImg.setAttribute('width', '100%');
