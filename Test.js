@@ -1,6 +1,7 @@
+alert("This website is best viewed in Landscape");
+
 var overlay = document.createElement("div");
 overlay.setAttribute('id', 'overlay');
-
 var oImg = document.createElement("img");
 oImg.setAttribute('src', 'https://r1.ilikewallpaper.net/iphone-wallpapers/download/78275/Sea-foam-iphone-wallpaper-ilikewallpaper_com.jpg');
 oImg.setAttribute('alt', 'na');
