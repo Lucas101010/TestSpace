@@ -25,9 +25,6 @@ myVideo.loop = true;
 myVideo.play();
 
 
-<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
-
-
 var frameBG = document.createElement("div");
 frameBG.setAttribute('id', 'frameBG');
 var animframe = document.createElement("iframe");
