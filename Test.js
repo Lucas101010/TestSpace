@@ -11,7 +11,7 @@ document.body.appendChild(overlay);
 
 
 var vidBG = document.createElement("div");
-overlay.setAttribute('id', 'videoBG');
+vidBG.setAttribute('id', 'videoBG');
 var oVid = document.createElement("VIDEO");
 oVid.setAttribute('id', 'myVid');
 oVid.setAttribute('src', 'https://www.w3schools.com/JSREF/movie.mp4');
