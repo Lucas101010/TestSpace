@@ -24,15 +24,14 @@ myVideo.muted = true;
 myVideo.loop = true;
 myVideo.play();
 
+
+<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+
+
 var frameBG = document.createElement("div");
 frameBG.setAttribute('id', 'frameBG');
-var animframe = document.createElement("frameset");
-animframe.setAttribute('rows', '100%');
-animframe.setAttribute('border', '0');
-var anim = document.createElement("frame");
-anim.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
-anim.setAttribute('frameborder', 0);
-animframe.appendChild(anim);
+var animframe = document.createElement("iframe");
+animframe.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
 frameBG.appendChild(animframe);
 document.body.appendChild(frameBG);
 /*
