@@ -8,8 +8,6 @@ oImg.setAttribute('width', '100%');
 overlay.appendChild(oImg);
 document.body.appendChild(overlay);
 
-
-
 var vidBG = document.createElement("div");
 vidBG.setAttribute('id', 'videoBG');
 var oVid = document.createElement("VIDEO");
@@ -22,6 +20,7 @@ document.body.appendChild(vidBG);
 
 var myVideo = document.getElementById("myVid");
 myVideo.loop = true;
+myVideo.play();
 /*
 
 Old Orientation Change
