@@ -6,11 +6,26 @@ oImg.setAttribute('alt', 'na');
 oImg.setAttribute('height', '100%');
 oImg.setAttribute('width', '100%');
 overlay.appendChild(oImg);
-
 document.body.appendChild(overlay);
 
 
+
+var vidBG = document.createElement("div");
+overlay.setAttribute('id', 'videoBG');
+var oVid = document.createElement("VIDEO");
+oVid.setAttribute('id', 'myVid');
+oVid.setAttribute('src', 'https://www.w3schools.com/JSREF/movie.mp4');
+oVid.setAttribute('height', '100%');
+oVid.setAttribute('width', '100%');
+vidBG.appendChild(oVid);
+document.body.appendChild(vidBG);
+
+var myVideo = document.getElementById("myVid");
+myVideo.loop = true;
 /*
+
+Old Orientation Change
+
 if(window.innerHeight > window.innerWidth){
     //alert("This website is best viewed in Landscape");
     oImg.setAttribute('height', '100%');
