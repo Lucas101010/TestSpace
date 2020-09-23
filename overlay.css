@@ -1,3 +1,7 @@
+#frameBG {
+  z-index: 0;
+}    
+
 #videoBG {
   position: fixed;
   display: show;
