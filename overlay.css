@@ -32,7 +32,8 @@
 }
 
 .Panel_selected__2RlcF {
-    display: none;
+    border: 0px solid #a9adc4;
+    box-shadow: none;
 }
 
 .Panel_root__27s4x {
@@ -45,6 +46,6 @@
 }
 
 .MuiPaper-root {
-    background-color: #000000;
+    background-color: #00000000;
 }
 
