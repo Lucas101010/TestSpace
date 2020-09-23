@@ -30,3 +30,22 @@
   pointer-events: none;
 }   
 }
+
+.Panel_selected__2RlcF {
+    display: none;
+}
+
+.Panel_root__27s4x {
+    padding: var(--padding);
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.MuiPaper-elevation1 {
+    box-shadow: none;
+}
+
+.MuiPaper-root {
+    background-color: #000000;
+}
+
