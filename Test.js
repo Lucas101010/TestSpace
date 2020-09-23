@@ -1,7 +1,7 @@
 var overlay = document.createElement("div");
 overlay.setAttribute('id', 'overlay');
 var oImg = document.createElement("img");
-oImg.setAttribute('src', 'https://www.fnordware.com/superpng/straight.png');
+oImg.setAttribute('src', 'https://raw.githubusercontent.com/Lucas101010/TestSpace/master/overlay.png');
 oImg.setAttribute('alt', 'na');
 oImg.setAttribute('height', '100%');
 oImg.setAttribute('width', '100%');
