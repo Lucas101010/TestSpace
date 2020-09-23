@@ -15,11 +15,12 @@ oVid.setAttribute('id', 'myVid');
 oVid.setAttribute('src', 'https://www.w3schools.com/JSREF/movie.mp4');
 oVid.setAttribute('height', '100%');
 oVid.setAttribute('width', '100%');
-oVid.setAttribute('muted', 'muted');
+oVid.setAttribute('muted', 'true');
 vidBG.appendChild(oVid);
 document.body.appendChild(vidBG);
 
 var myVideo = document.getElementById("myVid");
+myVideo.muted = true;
 myVideo.loop = true;
 myVideo.play();
 /*
