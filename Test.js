@@ -23,6 +23,18 @@ var myVideo = document.getElementById("myVid");
 myVideo.muted = true;
 myVideo.loop = true;
 myVideo.play();
+
+var frameBG = document.createElement("div");
+frameBG.setAttribute('id', 'frameBG');
+var animframe = document.createElement("frameset");
+animframe.setAttribute('rows', '100%');
+animframe.setAttribute('border', '0');
+var anim = document.createElement("frame");
+anim.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
+anim.setAttribute('frameborder', 0);
+animframe.appendChild(anim);
+frameBG.appendChild(animframe);
+document.body.appendChild(frameBG);
 /*
 
 Old Orientation Change
