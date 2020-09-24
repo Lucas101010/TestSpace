@@ -29,8 +29,9 @@ var frameBG = document.createElement("div");
 frameBG.setAttribute('id', 'frameBG');
 var animframe = document.createElement("iframe");
 animframe.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
-animframe.setAttribute('height', '100%');
+animframe.setAttribute('height', '80%');
 animframe.setAttribute('width', '100%');
+animframe.setAttribute('top', '10%');
 frameBG.appendChild(animframe);
 document.body.appendChild(frameBG);
 /*
