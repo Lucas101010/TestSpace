@@ -11,6 +11,7 @@
   background-color: rgba(0, 0, 0, 0.85);
   opacity: 0.0;
   transition:1s; 
+  pointer-events: none;
 }
 
 #intframe {
