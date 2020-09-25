@@ -29,14 +29,33 @@ var frameBG = document.createElement("div");
 frameBG.setAttribute('id', 'frameBG');
 var intframe = document.createElement("div");
 intframe.setAttribute('id', 'intframe');
+
 var animframe = document.createElement("iframe");
 animframe.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
 animframe.setAttribute('height', '80%');
 animframe.setAttribute('width', '100%');
 animframe.setAttribute('top', '10%');
+
 intframe.appendChild(animframe);
 frameBG.appendChild(intframe);
 document.body.appendChild(frameBG);
+
+var intbtn = document.createElement("div");
+intbtn.setAttribute('id', 'intbtn');
+document.body.appendChild(intbtn);
+
+
+var open = false;
+
+intbtn.addEventListener("mousedown", function(){
+	if(open){
+  	frameBG.setAttribute("style", "opacity:0.0; pointer-events:none;");
+	}
+	else{
+	frameBG.setAttribute("style", "opacity:1.0; pointer-events:auto;");
+	}
+    open = !open;
+});
 /*
 
 Old Orientation Change
