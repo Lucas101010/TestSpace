@@ -31,7 +31,7 @@ var intframe = document.createElement("div");
 intframe.setAttribute('id', 'intframe');
 
 var animframe = document.createElement("iframe");
-animframe.setAttribute('src', 'https://storage.net-fs.com/hosting/6581261/0/index.htm');
+animframe.setAttribute('src', '');
 animframe.setAttribute('height', '80%');
 animframe.setAttribute('width', '100%');
 animframe.setAttribute('top', '10%');
@@ -46,8 +46,14 @@ document.body.appendChild(intbtn);
 
 
 var open = false;
+var link = '';
 
 intbtn.addEventListener("mousedown", function(){
+	
+	if(link == ''){
+link = 'https://storage.net-fs.com/hosting/6581261/0/index.htm';
+animframe.setAttribute('src', link);
+}
 	if(open){
   	frameBG.setAttribute("style", "opacity:0.0; pointer-events:none;");
 	}
