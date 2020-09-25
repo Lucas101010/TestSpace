@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<body>
+https://test.co
+<div class="AttendeeView_videosBrochures__2kUYE">
+test
+<div class="box"> testingasdasd
+</div>
+</div>
+</body>
+
+<style>
+
+.AttendeeView_videosBrochures__2kUYE{
+ height : 300px;
+ width : 500px;
+ background-color : red;
+}
+
+.box{
+ height : 100%;
+ width : 100%;
+ background-color : blue;
+ opacity : 0.5;
+}
+
+#frameBG {
+  position: relative;
+  display: show;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 1.0;
+  transition:1s; 
+  pointer-events: auto;
+}
+
+#intframe {
+  position: absolute;
+  display: show;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+</style>
+
+<script>
+
+var map = new Map();
+
+map.set('https://test2.co','https://asd.com');
+map.set('https://test.co','https://storage.net-fs.com/hosting/6581261/0/index.htm');
+
+var frameBG = document.createElement("div");
+frameBG.setAttribute('id', 'frameBG');
+var intframe = document.createElement("div");
+intframe.setAttribute('id', 'intframe');
+
+var animframe = document.createElement("iframe");
+animframe.setAttribute('src', '');
+animframe.setAttribute('height', '100%');
+animframe.setAttribute('width', '100%');
+animframe.setAttribute('top', '0%');
+
+intframe.appendChild(animframe);
+frameBG.appendChild(intframe);
+
+
+function checkchange(){
+link = '';
+for (let key of map.keys()) {
+
+var source = document.getElementsByTagName('html')[0].innerHTML;
+var foundIndex = source.indexOf(key);
+  if(foundIndex != null){
+   link = map.get(key);
+  	break;
+  }
+}
+var test = document.getElementsByClassName("AttendeeView_videosBrochures__2kUYE");
+if(test.length > 0){
+  animframe.setAttribute('src', link);
+intframe.appendChild(animframe);
+frameBG.appendChild(intframe);
+test[0].prepend(frameBG);
+alert(link);
+}  
+}
+
+document.addEventListener('keypress', (event) => {
+alert('change');
+   checkchange();
+});
+
+
+</script>
+
+</html>
