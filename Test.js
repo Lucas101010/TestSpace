@@ -12,7 +12,7 @@ var vidBG = document.createElement("div");
 vidBG.setAttribute('id', 'videoBG');
 var oVid = document.createElement("VIDEO");
 oVid.setAttribute('id', 'myVid');
-oVid.setAttribute('src', 'https://www.w3schools.com/JSREF/movie.mp4');
+oVid.setAttribute('src', 'https://raw.githack.com/Lucas101010/TestSpace/master/Bg.mp4');
 oVid.setAttribute('height', '100%');
 oVid.setAttribute('width', '100%');
 oVid.setAttribute('muted', 'true');
