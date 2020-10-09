@@ -4,7 +4,8 @@
 
 
 <body>
-https://test.co
+
+<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit">https://test.com</a>
 <div class="AttendeeView_videosBrochures__2kUYE">
 test
 <div class="box"> testingasdasd
@@ -12,6 +13,55 @@ test
 </div>
 </body>
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.tknpinternational.com/wp-content/plugins/nivo-slider-for-wordpress/js/jquery.nivo.slider.pack.js"></script>
+
+<style>
+		#slider{
+			width:1004px;
+			height:335px;
+			background:transparent url(https://www.tknpinternational.com/wp-content/plugins/nivo-slider-for-wordpress/css/images/loading.gif) no-repeat 50% 50%;
+		}
+		.nivo-caption {
+			background:#000000;
+			color:#ffffff;
+		}
+</style>
+		
+
+<script>
+		var $nv4wp = jQuery.noConflict();
+		$nv4wp(window).load(function() {
+			$nv4wp('#slider').nivoSlider({
+				effect:'random',
+				slices:15, // For slice animations
+				boxCols: 4, // For box animations
+				boxRows: 2, // For box animations
+				animSpeed:500, // Slide transition speed
+				pauseTime:3000, // How long each slide will show
+				startSlide:0, // Set starting Slide (0 index)
+				directionNav:true, //Next & Prev
+				directionNavHide:true, //Only show on hover
+				controlNav:true, // 1,2,3... navigation
+				controlNavThumbs:false, // Use thumbnails for Control Nav
+				controlNavThumbsFromRel:false, // Use image rel for thumbs
+				controlNavThumbsSearch: '.jpg', // Replace this with...
+				controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+				keyboardNav:true, //Use left & right arrows
+				pauseOnHover:true, //Stop animation while hovering
+				manualAdvance:false, //Force manual transitions
+				captionOpacity:0.8, //Universal caption opacity
+				prevText: 'Prev', // Prev directionNav text
+				nextText: 'Next', // Next directionNav text
+				beforeChange: function(){}, // Triggers before a slide transition
+				afterChange: function(){}, // Triggers after a slide transition
+				slideshowEnd: function(){}, // Triggers after all slides have been shown
+				lastSlide: function(){}, // Triggers when last slide is shown
+				afterLoad: function(){} // Triggers when slider has loaded
+			});
+		});
+		
+</script>
 <style>
 
 .AttendeeView_videosBrochures__2kUYE{
@@ -57,7 +107,7 @@ test
 
 var map = new Map();
 
-map.set('https://test2.co','https://asd.com');
+map.set('https://asd.co','https://asd.com');
 map.set('https://test.co','https://storage.net-fs.com/hosting/6581261/0/index.htm');
 
 var frameBG = document.createElement("div");
@@ -79,7 +129,10 @@ function checkchange(){
 link = '';
 for (let key of map.keys()) {
 
-var source = document.getElementsByTagName('html')[0].innerHTML;
+var sources = document.getElementsByClassName("MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit");
+
+const source = document.body.innerHTML;
+console.log(source);
 var foundIndex = source.indexOf(key);
   if(foundIndex != null){
    link = map.get(key);
@@ -92,7 +145,6 @@ if(test.length > 0){
 intframe.appendChild(animframe);
 frameBG.appendChild(intframe);
 test[0].prepend(frameBG);
-alert(link);
 }  
 }
 
