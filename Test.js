@@ -33,9 +33,8 @@ intframe.setAttribute('id', 'intframe');
 
 var animframe = document.createElement("iframe");
 animframe.setAttribute('src', '');
-animframe.setAttribute('height', '80%');
+animframe.setAttribute('height', '100%');
 animframe.setAttribute('width', '100%');
-animframe.setAttribute('top', '10%');
 
 intframe.appendChild(animframe);
 frameBG.appendChild(intframe);
