@@ -46,22 +46,43 @@ intbtn.setAttribute('id', 'intbtn');
 document.body.appendChild(intbtn);
 
 
-var open = false;
-var link = '';
 
-intbtn.addEventListener("mousedown", function(){
-	
-	if(link == ''){
-link = 'https://storage.net-fs.com/hosting/6581261/0/index.htm';
-animframe.setAttribute('src', link);
+var map = new Map();
+
+map.set('https://asd.co','https://asd.com');
+map.set('https://test.co','https://storage.net-fs.com/hosting/6581261/0/index.htm');
+map.set('https://test2.co','https://java.com');
+
+function checkchange(){
+link = '';
+for (let key of map.keys()) {
+
+var sources = document.getElementsByClassName("MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit");
+
+var i;
+for (i = 0; i < sources.length; i++) {
+  var text = sources[i].innerHTML;
+  var foundIndex = text.indexOf(key);
+  if(foundIndex == 0){
+   link = map.get(key);
+   break;
+  }
+	if(link != '')break;
 }
-	if(open){
-  	frameBG.setAttribute("style", "opacity:0.0; pointer-events:none;");
-	}
-	else{
-	frameBG.setAttribute("style", "opacity:1.0; pointer-events:auto;");
-	}
-    open = !open;
+}
+var test = document.getElementsByClassName("AttendeeView_videosBrochures__2kUYE");
+console.log(link);
+if(test.length > 0){
+  animframe.setAttribute('src', link);
+intframe.appendChild(animframe);
+frameBG.appendChild(intframe);
+test[0].prepend(frameBG);
+}  
+}
+
+document.addEventListener('keypress', (event) => {
+alert('change');
+   checkchange();
 });
 /*
 
