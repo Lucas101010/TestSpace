@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html>
 
 
 
 <body>
 
-<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit">https://test.com</a>
+<a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit">https://asd.co</a>
 <div class="AttendeeView_videosBrochures__2kUYE">
 test
 <div class="box"> testingasdasd
@@ -109,6 +108,7 @@ var map = new Map();
 
 map.set('https://asd.co','https://asd.com');
 map.set('https://test.co','https://storage.net-fs.com/hosting/6581261/0/index.htm');
+map.set('https://test2.co','https://java.com');
 
 var frameBG = document.createElement("div");
 frameBG.setAttribute('id', 'frameBG');
@@ -131,15 +131,18 @@ for (let key of map.keys()) {
 
 var sources = document.getElementsByClassName("MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit");
 
-const source = document.body.innerHTML;
-console.log(source);
-var foundIndex = source.indexOf(key);
-  if(foundIndex != null){
+var i;
+for (i = 0; i < sources.length; i++) {
+  var text = sources[i].innerHTML;
+  var foundIndex = text.indexOf(key);
+  if(foundIndex == 0){
    link = map.get(key);
-  	break;
+   break;
   }
 }
+}
 var test = document.getElementsByClassName("AttendeeView_videosBrochures__2kUYE");
+console.log(link);
 if(test.length > 0){
   animframe.setAttribute('src', link);
 intframe.appendChild(animframe);
