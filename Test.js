@@ -48,9 +48,9 @@ document.body.appendChild(intbtn);
 
 var map = new Map();
 
-map.set('ASD','https://asd.com');
+map.set('ASDtestco','https://asd.com');
 map.set('Test','https://storage.net-fs.com/hosting/6581261/0/index.htm');
-map.set('QWE','https://java.com');
+map.set('Newtestco','https://java.com');
 
 function checkchange(){
 link = '';
