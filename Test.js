@@ -33,7 +33,6 @@ intframe.setAttribute('id', 'intframe');
 
 var animframe = document.createElement("iframe");
 animframe.setAttribute('src', '');
-animframe.setAttribute('id', 'id');
 animframe.setAttribute('height', '100%');
 animframe.setAttribute('width', '100%');
 
@@ -41,8 +40,8 @@ intframe.appendChild(animframe);
 frameBG.appendChild(intframe);
 document.body.appendChild(frameBG);
 
-var intbtn = document.createElement("div");
-intbtn.setAttribute('id', 'intbtn');
+//var intbtn = document.createElement("div");
+//intbtn.setAttribute('id', 'intbtn');
 //document.body.appendChild(intbtn);
 
 
@@ -54,7 +53,7 @@ map.set('Test','https://storage.net-fs.com/hosting/6581261/0/index.htm');
 map.set('Newtestco','https://java.com');
 
 function checkchange(){
-var obj = document.getElementById("id");
+var obj = document.getElementById("frameBG");
 if(obj) {
 return;
 }
@@ -86,7 +85,13 @@ if(test.length > 0){
 }  
 }
 
+document.addEventListener('keypress', (event) => {
+  alert('change');
+   checkchange();
+});
+
 window.setInterval(function(){
+
 	checkchange();
 }, 5000);
 
