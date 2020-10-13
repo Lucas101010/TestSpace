@@ -33,6 +33,7 @@ intframe.setAttribute('id', 'intframe');
 
 var animframe = document.createElement("iframe");
 animframe.setAttribute('src', '');
+animframe.setAttribute('id', 'id');
 animframe.setAttribute('height', '100%');
 animframe.setAttribute('width', '100%');
 
@@ -42,7 +43,7 @@ document.body.appendChild(frameBG);
 
 var intbtn = document.createElement("div");
 intbtn.setAttribute('id', 'intbtn');
-document.body.appendChild(intbtn);
+//document.body.appendChild(intbtn);
 
 
 
@@ -53,10 +54,13 @@ map.set('Test','https://storage.net-fs.com/hosting/6581261/0/index.htm');
 map.set('Newtestco','https://java.com');
 
 function checkchange(){
+var obj = document.getElementById("id");
+if(obj) {
+return;
+}
+	
 link = '';
 for (let key of map.keys()) {
-
-	
 //Typography_medium18__6_nQB Typography_darkColor__2SApQ
 //MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit
 var sources = document.getElementsByClassName("Typography_medium18__6_nQB Typography_darkColor__2SApQ");
@@ -75,22 +79,30 @@ for (i = 0; i < sources.length; i++) {
 var test = document.getElementsByClassName("AttendeeView_videosBrochures__2kUYE");
 console.log(link);
 if(test.length > 0){
-  animframe.setAttribute('src', link);
-intframe.appendChild(animframe);
-frameBG.appendChild(intframe);
-test[0].prepend(frameBG);
+	animframe.setAttribute('src', link);
+	intframe.appendChild(animframe);
+	frameBG.appendChild(intframe);
+	test[0].prepend(frameBG);
 }  
 }
 
-document.addEventListener('keypress', (event) => {
-alert('change');
-   checkchange();
-});
+window.setInterval(function(){
+	checkchange();
+}, 5000);
 
-document.addEventListener('change', (event) => {
-alert('refresh change');
-   checkchange();
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 Old Orientation Change
