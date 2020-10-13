@@ -86,6 +86,11 @@ document.addEventListener('keypress', (event) => {
 alert('change');
    checkchange();
 });
+
+document.addEventListener('change', (event) => {
+alert('refresh change');
+   checkchange();
+});
 /*
 
 Old Orientation Change
