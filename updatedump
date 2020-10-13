@@ -1,0 +1,54 @@
+<script>
+var map = new Map();
+
+map.set('Webinar Room 1','https://asd.com');
+map.set('Webinar Room 2','https://storage.net-fs.com/hosting/6581261/0/index.htm');
+map.set('Webinar Room 3','https://java.com');
+
+window.setInterval(function(){
+
+console.log("ran");
+
+//if my button exist return
+var obj = document.getElementById("intbtn");
+if(obj) {
+console.log("exist");
+return;
+}
+
+//if block doesn't exist return
+var bod = document.getElementsByClassName("MuiGrid-root widget-grid MuiGrid-container MuiGrid-direction-xs-column");
+if(bod.length == 0) return;
+
+//if title doesn't exist return
+var title = document.getElementsByClassName("Typography_medium18__6_nQB Typography_darkColor__2SApQ");
+if(title.length == 0) return;
+
+var link = "";
+//check title with map strings
+var text = title[0].innerHTML;
+console.log(text);
+//loop through all strings
+for (let key of map.keys()){
+var foundindex = text.indexOf(key);
+if(foundindex == 0){
+link = map.get(key);
+break;
+}
+}
+
+//if no string matches we return
+if(link == "") return;
+//make the button with all the info
+var intbtn = document.createElement("div");
+intbtn.setAttribute('id', 'intbtn');
+//add the button
+bod[0].appendChild(intbtn);
+intbtn.addEventListener("click", function (){
+window.open(link);
+});
+
+console.log("created btn");
+
+}, 5000);
+</script>
