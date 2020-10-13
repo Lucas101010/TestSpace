@@ -36,9 +36,9 @@ animframe.setAttribute('src', '');
 animframe.setAttribute('height', '100%');
 animframe.setAttribute('width', '100%');
 
-intframe.appendChild(animframe);
-frameBG.appendChild(intframe);
-document.body.appendChild(frameBG);
+//intframe.appendChild(animframe);
+//frameBG.appendChild(intframe);
+//document.body.appendChild(frameBG);
 
 //var intbtn = document.createElement("div");
 //intbtn.setAttribute('id', 'intbtn');
@@ -54,27 +54,22 @@ map.set('Newtestco','https://java.com');
 
 function checkchange(){
 var obj = document.getElementById("frameBG");
-if(obj) {
-return;
-}
+if(obj)return;
 	
 link = '';
-for (let key of map.keys()) {
-//Typography_medium18__6_nQB Typography_darkColor__2SApQ
-//MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit
+	
 var sources = document.getElementsByClassName("Typography_medium18__6_nQB Typography_darkColor__2SApQ");
-
-var i;
-for (i = 0; i < sources.length; i++) {
-  var text = sources[i].innerHTML;
+if(sources.length == 0) return;
+	
+var text = sources[0].innerHTML;
+for (let key of map.keys()) {
   var foundIndex = text.indexOf(key);
   if(foundIndex == 0){
    link = map.get(key);
    break;
   }
-	if(link != '')break;
 }
-}
+	
 var test = document.getElementsByClassName("AttendeeView_videosBrochures__2kUYE");
 console.log(link);
 if(test.length > 0){
@@ -85,28 +80,9 @@ if(test.length > 0){
 }  
 }
 
-document.addEventListener('keypress', (event) => {
-  alert('change');
-   checkchange();
-});
-
 window.setInterval(function(){
-
 	checkchange();
 }, 5000);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 
