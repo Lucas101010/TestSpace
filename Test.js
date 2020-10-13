@@ -48,15 +48,18 @@ document.body.appendChild(intbtn);
 
 var map = new Map();
 
-map.set('https://asd.co','https://asd.com');
-map.set('https://test.co','https://storage.net-fs.com/hosting/6581261/0/index.htm');
-map.set('https://test2.co','https://java.com');
+map.set('ASD','https://asd.com');
+map.set('Test','https://storage.net-fs.com/hosting/6581261/0/index.htm');
+map.set('QWE','https://java.com');
 
 function checkchange(){
 link = '';
 for (let key of map.keys()) {
 
-var sources = document.getElementsByClassName("MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit");
+	
+//Typography_medium18__6_nQB Typography_darkColor__2SApQ
+//MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit
+var sources = document.getElementsByClassName("Typography_medium18__6_nQB Typography_darkColor__2SApQ");
 
 var i;
 for (i = 0; i < sources.length; i++) {
