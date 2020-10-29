@@ -64944,7 +64944,7 @@
   "use strict";
   (function (e) {
     //if (n(1114), n(917), n(916), e._babelPolyfill) throw new Error("only one instance of babel-polyfill is allowed");
-    e._babelPolyfill = !0;
+    //e._babelPolyfill = !0;
     var t = "defineProperty";
 
     function r(e, n, r) {
