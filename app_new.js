@@ -64956,8 +64956,8 @@
       })
     }
     r(String.prototype, "padLeft", "".padStart), r(String.prototype, "padRight", "".padEnd), "pop,reverse,shift,keys,values,entries,indexOf,every,some,forEach,map,filter,find,findIndex,includes,join,slice,concat,push,splice,unshift,sort,lastIndexOf,reduce,reduceRight,copyWithin,fill".split(",").forEach(function (e) {
-      [][e] && r(Array, e, Function.call.bind([][e]))*/
-    })
+      [][e] && r(Array, e, Function.call.bind([][e]))
+    })*/
   }).call(this, n(50))
 }, function (e, t, n) {
   n(1115), e.exports = n(913)
