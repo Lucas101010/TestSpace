@@ -8,7 +8,7 @@ if(Hls.isSupported()) {
   hls.on(Hls.Events.MANIFEST_PARSED,function() {
     vintage_radio.play();
     document.addEventListener('radio_volumeChange', function(e) {
-      vintage_radio.volume = e.vol;
+      vintage_radio.volume = e.detail;
     });
   });
 }
