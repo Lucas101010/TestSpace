@@ -1,3 +1,5 @@
+//version 10
+
 var vintage_radio = document.getElementById('vintage_radio');
 vintage_radio.vol = 0.2;
 
