@@ -1,4 +1,4 @@
-//version 11
+//version 12
 var vintage_radio = document.getElementById('vintage_radio');
 
 if(Hls.isSupported()) {
@@ -8,7 +8,7 @@ if(Hls.isSupported()) {
   hls.on(Hls.Events.MANIFEST_PARSED,function() {
     vintage_radio.play();
     document.addEventListener('radio_volumeChange', function(e) {
-      vintage_radio.volume = e;
+      vintage_radio.volume = e.vol;
     });
   });
 }
