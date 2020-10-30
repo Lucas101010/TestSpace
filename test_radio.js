@@ -1,24 +1,16 @@
-var radio = document.createElement('video');
-radio.id = "video";
-document.body.appendChild(radio);
+var vintage_radio = document.getElementById('vintage_radio');
+vintage_radio.vol = 0.2;
 
-  var video = document.getElementById('video');
-  if(Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource('https://hls.rastream.com/vintageradiosg-vintage.web.hls/playlist.m3u8?authtoken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvaWQiOiJsYXlsaW8iLCJpYXQiOjE2MDQwMjE3OTgsImV4cCI6MTYwNDEwODE5OH0.wARGspn6fo1rvOhjLH07qE3zoJAMhP0IISDCYiYHSUE');
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
- }
- // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
- // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
- // This is using the built-in support of the plain video element, without using hls.js.
- // Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
- // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';
-    video.addEventListener('loadedmetadata',function() {
-      video.play();
+if(Hls.isSupported()) {
+  var hls = new Hls();
+  hls.loadSource('https://hls.rastream.com/vintageradiosg-vintage.web.hls/playlist.m3u8?authtoken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvaWQiOiJsYXlsaW8iLCJpYXQiOjE2MDQwMjE3OTgsImV4cCI6MTYwNDEwODE5OH0.wARGspn6fo1rvOhjLH07qE3zoJAMhP0IISDCYiYHSUE');
+  hls.attachMedia(vintage_radio);
+  hls.on(Hls.Events.MANIFEST_PARSED,function() {
+    vintage_radio.play();
+    document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 113){
+      vintage_radio.volume = vintage_radio.vol;
+    }
     });
-  }
+  });
+}
